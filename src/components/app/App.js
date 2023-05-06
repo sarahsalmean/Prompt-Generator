@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useEffect, useState } from "react";
 import InputBox from "../input/index";
 import Display from "../display/index";
+import pic from "./HEADER.png"
 
 function App() {
   const [language, setLanguage] = useState("");
@@ -90,9 +91,7 @@ setHasBuilding(false)
   }
   return (
     <div className="App">
-      <header className="App-header">
-        <p>Chat GPT prompt generator for devs 💻</p>
-      </header>
+      <img className="headpic" src={pic} alt="header" />
       {!clicked&& <InputBox
         languageChange={languageChange}
         buildingValue={buildingValue}
@@ -114,6 +113,7 @@ setHasBuilding(false)
           Please fill in the required information so that we can help you!
         </h3>
       )}
+      <div className="prompt">
     {clicked && <p>Hello</p>}
     {clicked && !hasBuilding && <p>I am building an application.</p>}
         {clicked && hasBuilding && <p>I am building a {building}.</p>}
@@ -134,6 +134,7 @@ setHasBuilding(false)
       {clicked && explained && (
         <p>Please explain what the code is doing line by line</p>
       )}
+      </div>
       <div className="buttons">
       {clicked && (
         <a href="https://chat.openai.com" alt="Open AI">
@@ -141,7 +142,7 @@ setHasBuilding(false)
         </a>
       )}
       {clicked && (
-          <button class="button" onClick={reset}>Go again!</button>
+          <button class="button" onClick={reset}>Go again</button>
       )}
       </div>
     </div>

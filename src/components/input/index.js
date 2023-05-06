@@ -6,12 +6,18 @@ export default function InputBox(props) {
   return (
     <div>
       <div>
-        <h3 class="top">
+        <h4 class="top">
           {" "}
           Having trouble with your code and can't figure out what the issue is?
+          <br></br>
+          <br></br>
           Answer the questions below and we'll generate you a prompt to ask
-          ChatGPT what hte matter could be.
-        </h3>
+          your chosen AI what the matter could be.
+          <br></br>
+          <br></br>
+          You don't need to fill out every section, but we recommend completing at least two of them.
+          <br></br>
+        </h4>
         <p class="question">Which programming language are you using?</p>
         <label>
           <input
@@ -29,42 +35,46 @@ export default function InputBox(props) {
           <input type="radio" value="CSS" onClick={props.languageChange} /> CSS{" "}
         </label>
         <div>
-          <p class="question">What are you building?</p>
-          <input
+          <p class="question">
+          <br></br>What are you building?</p>
+          <h5><i>For example: "a quiz app"</i></h5>
+          <textarea
             class="textbox"
             type="text"
             onChange={props.buildingValue}
             value={props.buildingValues}
-          ></input>
+          ></textarea>
         </div>
         <div>
           <p class="question">What is the problem?</p>
-          <input
+          <h5><i>For example: "I am trying to map through an array, however it is not working"</i></h5>
+          <textarea
             class="textbox"
             type="text"
             onChange={props.problemValue}
             value={props.problemValues}
-          ></input>
+          ></textarea>
         </div>
         <div>
           <p class="question">
             Please paste the full code from the file that you're working from:
           </p>
-          <input
+          <textarea
             class="textbox"
             type="text"
             onChange={props.codeValue}
             value={props.codeValues}
-          ></input>
+          ></textarea>
         </div>
         <div>
           <p class="question">Any other comments?</p>
-          <input
+          <h5><i>Leave blank if not</i></h5>
+          <textarea
             class="textbox"
             type="text"
             onChange={props.commentValue}
             value={props.commentValues}
-          ></input>
+          ></textarea>
         </div>
         <div class="boxes">
           <p class="question">Tick all that apply:</p>
@@ -95,7 +105,7 @@ export default function InputBox(props) {
           </label>
         </div>
         <button class="button" onClick={props.buttonClick}>
-          Generate my prompt!
+          Generate
         </button>
       </div>
     </div>
