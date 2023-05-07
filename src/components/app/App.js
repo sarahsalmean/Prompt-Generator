@@ -114,13 +114,14 @@ setHasBuilding(false)
         </h3>
       )}
       <div className="prompt">
+      {clicked && <h3 class="prompthead">Your prompt:</h3>}
     {clicked && <p>Hello</p>}
     {clicked && !hasBuilding && <p>I am building an application.</p>}
         {clicked && hasBuilding && <p>I am building a {building}.</p>}
         {clicked && hasLanguage && <p>I am using {language}.</p>}
         {clicked && hasProblem && <p>The issue that I'm facing is {problem}.</p>}
         {clicked && hasComment && <p>Please note that {comments}.</p>}
-      {clicked && hasCode && <p>Here is my code: {code} END OF CODE</p>}
+      {clicked && hasCode && <p>Here is my code: {code} / END OF CODE</p>}
       {clicked && <p>Please can you tell me why my current code might not be working, and suggest what I could do to rectify the problem?</p>}
       {clicked && lines && (
         <p>Please highlight exactly which lines I need to change.</p>
@@ -142,7 +143,7 @@ setHasBuilding(false)
         </a>
       )}
       {clicked && (
-          <button class="button" onClick={reset}>Go again</button>
+          <button class="button" onClick={reset}>Generate another</button>
       )}
       </div>
     </div>

@@ -19,25 +19,27 @@ export default function InputBox(props) {
           <br></br>
         </h4>
         <p class="question">Which programming language are you using?</p>
+        <div class="languages">
         <label>
           <input
             type="radio"
             value="Javascript"
             onClick={props.languageChange}
           />
-          Javascript
+          Javascript 
         </label>
         <label>
           <input type="radio" value="HTML" onClick={props.languageChange} />{" "}
-          HTML
+          HTML 
         </label>
         <label>
-          <input type="radio" value="CSS" onClick={props.languageChange} /> CSS{" "}
+          <input type="radio" value="CSS" onClick={props.languageChange} /> CSS {" "}
         </label>
+        </div>
         <div>
           <p class="question">
           <br></br>What are you building?</p>
-          <h5><i>For example: "a quiz app"</i></h5>
+          <h5><i>For example: "quiz app"</i></h5>
           <textarea
             class="textbox"
             type="text"
@@ -57,7 +59,7 @@ export default function InputBox(props) {
         </div>
         <div>
           <p class="question">
-            Please paste the full code from the file that you're working from:
+            Please paste the relevant code from the file(s) that you're working from:
           </p>
           <textarea
             class="textbox"
