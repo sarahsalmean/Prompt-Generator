@@ -18,7 +18,7 @@ export default function InputBox(props) {
           You don't need to fill out every section, but we recommend completing at least two of them.
           <br></br>
         </h4>
-        <p class="question">Which programming language are you using?</p>
+        <p class="question">Which programming language do you think the problem is occurring in?</p>
         <div class="languages">
         <label>
           <input
@@ -49,7 +49,7 @@ export default function InputBox(props) {
         </div>
         <div>
           <p class="question">What is the problem?</p>
-          <h5><i>For example: "I am trying to map through an array, however it is not working"</i></h5>
+          <h5><i>For example: "I am trying to map through an entire array, however it is only going up to a certain index"</i></h5>
           <textarea
             class="textbox"
             type="text"
