@@ -23,10 +23,18 @@ export default function InputBox(props) {
         <label>
           <input
             type="radio"
+            value="React"
+            onClick={props.languageChange}
+          />
+          React
+        </label>
+        <label>
+          <input
+            type="radio"
             value="Javascript"
             onClick={props.languageChange}
           />
-          Javascript 
+          Vanilla Javascript 
         </label>
         <label>
           <input type="radio" value="HTML" onClick={props.languageChange} />{" "}
